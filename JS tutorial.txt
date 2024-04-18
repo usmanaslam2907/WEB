@@ -1,0 +1,204 @@
+Dynamic typing
+Unary Operator
+Binary operator
+
+for of for in for(element of friens)
+Document Object Model
+
+document.getElementById('nav')
+document.querySelectAll('#nav>li')
+
+Events and Listening:
+Browser Events:
+  click   using onClick=hide()
+  Contextmenu
+
+addeventlistener
+  mouseover/mouseout
+mousedown/mouseup
+mousemove
+
+submit
+focus
+
+
+timmmm=setTimeOut(greet,2000,"usman")
+clearTimeout(timmmm)
+
+
+Arrow Functions:
+let greet=()=>{}
+let greet=a=>a/2;
+let greet=(a,b)=>a+b;
+
+JSON Means tranfor data using network and other else so using JSON transport objects so objects are complicate like functions others so strings make and transport
+ <script>
+     let json={name:"usman",age:23,friend:"waqar"}
+     console.log(json)
+     let myjson=JSON.stringify(json)
+     console.log(myjson)
+     myjson=myjson.replace('usman','ahmad')
+        console.log(myjson)
+
+        //convert into objects
+        newjsonobj=JSON.parse(myjson)
+        console.log(newjsonobj)
+
+
+
+
+
+Blocking(Synchronous) -
+Line by Line executing
+
+ Non Blocking(Asynchronus) Execution Code Call Back implementations  jab kaam pora kare ga to ya function fire kare ga because we dont want ka hamari calls block ho
+line by line execute dont guarantee Node js working on non-blocking asychronus
+
+nodemon help to automatically save and live run
+npm install nodemon --global
+automatically restart
+
+Express is a frame work for node.js  basic tasks to handle routing and then scalability free and open sourse
+
+
+
+Static files can be accsess easily by anyone
+Pug is a template of Express / Node.js
+
+string intropolation   `${}`
+
+
+Important Points of JavaScript Courses:
+async await(better) >> promise chains(normal better) >> callbacks hell (light better)
+
+Difference Between Syncgronus and Asychronus :
+
+(blocking): Synchronous means code runs in a particular sequence of instructions executions given in the programs. Each instructions executions
+when previous instruction executions >> Follow the order in programming. All programmings mostly in synchronus programming
+
+(non-blocking): Asychronus means sometime some instruction are take more time so we used asychronus 
+sometime we used API's so take time to extrat data so we use Asychronus. 
+so we not ait for previous instruction to complete if take time
+//Asychronus
+console.log("1");
+console.log("2");
+function print()
+{
+    console.log("Hello")
+}
+setTimeout(print, 4000)
+console.log("3");
+console.log("4");
+
+
+CallBacks:
+A callback function passed an argument/parameter to another functions
+problem is callback hell is a problem when nesting occur means if contain also if constions and similar for loops
+when we used nesting in callbacks so problem occur is hell.
+let age=19;
+if(age>=18)
+{
+    if(age>=60)
+    {
+        console.log("senior)
+    }
+}
+
+
+when we get data from database for our authentication and other work so take time to extract so we will make copy of
+database so we make function getData(dataID)  if take 2sec time so we make Asychronus and write callbacks 
+
+getData(1);
+getData(2);
+getData(3); pele 1 ahe pir 2 ahe pir 3 ahe like e.g first search username in database then check passwords. so we use callbacks
+so we used getData(1,getData(2)) not write so make arrow function
+
+function getData(dataid,getNextData)
+{
+    setTimeout(()=>{
+        console.log("data",dataid);
+        if(getNextData)
+        {
+            getNextData()
+        }
+    },2000)
+}
+getData(1,()=>{
+    getData(2,()=>{
+        getData(3)
+    });
+})
+This is called Hell to easily understand :
+so we help "Promises" to cover this problems
+
+Amazon said your order is delivered successfully amazon promisses us so promise rejects resolve 
+promise is for "eventual" complete of tasks. it has  an object in JS.
+and its a solution to callback hell.
+
+reject means kaam ho jae ga magar error ahe ga
+3 states of promises:
+Pending   FullFilled(Resolved)   Rejected(Canceled)
+
+2 handlers reject resolve
+ let promise = new Promise(resolve, reject )=>{
+       resolve("123")
+       reject("Some error occurred")
+}
+in other case other sides are create promised and we are handle it.
+
+
+In General Programming: promise caining
+when we function work correctly so write resolve
+
+if our promise success so use promise.then(res)=>{
+
+}
+if our promise failed so use promise.catch(err)=>{
+    
+}
+
+<<<<<   async and await   >>>>
+asyn function always return Promise.
+automatically return Promise
+async function()
+{
+    console.log("Hello")
+}
+
+await pauses the executions of its surrounding asyn functions until promis is settled
+
+await always used in promise function
+async function getwether()=>{
+    await api();
+}
+
+
+IIFA Imediately Invoeked Function Expression
+
+
+
+
+
+
+>>>>> Fetch API <<<<<<<
+API Store recipe of all foof so we make request to get recipe of pizza
+we will get final output 
+using Fetch sending and receiving data;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
